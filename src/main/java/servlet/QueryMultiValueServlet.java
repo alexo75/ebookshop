@@ -49,6 +49,10 @@ public class QueryMultiValueServlet extends HttpServlet {
           }
           sqlStr += ") AND qty > 0 ORDER BY author ASC, title ASC";
 
+	       sqlStr = "SELECT * FROM books WHERE author = "
+	          + "'" + request.getParameter("author") + "'"
+	          + " AND price < " + request.getParameter("price")
+	      	+ " AND qty > 0 ORDER BY author ASC, title ASC";
 
          out.println("<h3>Thank you for your query.</h3>");
          out.println("<p>Your SQL statement is: " + sqlStr + "</p>"); // Echo for debugging
