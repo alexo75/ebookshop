@@ -69,8 +69,7 @@ public class EshopQueryServlet extends HttpServlet {
 			out.println("<p>Error: " + ex.getMessage() + "</p>");
 			out.println("<p>Check Tomcat console for details.</p>");
 			ex.printStackTrace();
-		} // Step 5: Close conn and stmt - Done automatically by try-with-resources (JDK
-			// 7)
+		} // Step 5: Close conn and stmt - Done automatically by try-with-resources (JDK 7)
 
 		out.println("</body></html>");
 		out.close();
